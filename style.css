@@ -46,7 +46,7 @@ section {
 /* header */
 header {
   height: auto;
-  width: 100%;
+  min-width: 1200px;
 }
 
 .header-two-part {
@@ -93,6 +93,7 @@ header {
 }
 .fa-bars {
   font-size: 2rem;
+  cursor: pointer;
 }
 .logo {
   padding: 5px;
@@ -185,13 +186,173 @@ nav ul li a:hover {
   border: var(--third-color);
 }
 
+/* main */
+main {
+  position: relative;
+}
+/*left menu space  */
+.left-menu-space {
+  display: none;
+  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: calc(max-content + 5rem);
+  background-color: #fff;
+  z-index: 999;
+  padding: 1rem;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  
+}
+.left-menu-space #menu-close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.left-menu-list {
+  font-size: 1rem;
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.left-menu-list li {
+  padding: 10px;
+}
+.left-menu-list li a {
+  color: var(--font-black-color);
+}
+.left-menu-list li:hover {
+  background-color: var(--primary-color);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.darkbgc {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+/* loaction menu space */
+.location-space {
+  display: none;
+  position: fixed;
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 999;
+  padding: 2rem;
+  overflow-y: auto;
+  box-shadow: 0px 0 50px rgba(0, 0, 0, 0.9);
+  border-radius: 1rem 1rem 0 0;
+  max-height: 600px;
+  height: 100%;
+}
+.heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.heading img {
+  height: 4rem;
+}
+.heading h3 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  display: flex;
+}
+.heading h3::before {
+  content: "";
+  display: block;
+  height: 3rem;
+  width: 0.5rem;
+  background-color: #fed250;
+  margin-right: 1rem;
+}
+.loc-x {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.search-bar {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 1.5rem;
+}
+#search-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+#clear-search,
+.fa-search {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.city-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.city-card {
+  display: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+}
+
+.city-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.city-card p {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.location-space #menu-close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 /* section 1 */
 .section1 {
-  border: 1px solid red;
   height: 80vh;
+  min-width: 1200px;
+  width: 100%;
   background: url("./assets/section1/Banglr_Banner_Desktop-92bec25b99397445dc79c6db2493016a1b5ad62fbb4825a1345fac85ccdcf0c1.webp")
     no-repeat center center/cover;
   position: relative;
+  overflow: hidden;
 }
 
 .search-card {
@@ -210,7 +371,7 @@ nav ul li a:hover {
   transition: all 0.5s ease;
 }
 .search-card h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .pickup-div,
 .dropoff-div {
@@ -226,13 +387,30 @@ nav ul li a:hover {
 }
 
 .search-btn {
-  width: 100%;
   background-color: var(--primary-color);
   color: var(--font-black-color);
 }
 
+.bottom-img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  color: var(--font-white-color);
+}
+.bottom-img span {
+  color: var(--primary-color);
+}
+.bottom-img .fa-arrow-right {
+  margin-left: 10px;
+}
+
 /* footer */
 footer {
+  min-width: 1200px;
   color: var(--font-white-color);
 }
 
@@ -249,7 +427,7 @@ footer {
 .quick-links,
 .follow-us,
 .download-us {
-  border: none; /* Removing unnecessary borders */
+  border: none;
   width: 100%;
 }
 

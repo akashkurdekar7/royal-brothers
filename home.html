@@ -28,8 +28,9 @@
         <div class="header-con">
           <div class="left">
             <div class="left-menu">
-              <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-bars" id="menu-open"></i>
             </div>
+
             <div class="logo">
               <img
                 src="./assets/royal_brothers_logo-229959d7727f356b2e4fc3bd9c0c527c60127d009c93989a93e2daa0b1c2d556.svg"
@@ -73,7 +74,7 @@
                 </select>
               </li>
               <li>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" id="popup-open"></i>
               </li>
               <li>
                 <button class="login-btn btn">Login</button>
@@ -86,6 +87,60 @@
         </div>
       </div>
     </header>
+
+    
+    <div class="left-menu-space" id="left-menu">
+      <i class="fa-solid fa-x" id="menu-close"></i>
+      <ul class="left-menu-list">
+        <li><a href="#">Tariff</a></li>
+        <li><a href="#">Store by RB New</a></li>
+        <li><a href="#">Adventures by RB New</a></li>
+        <li><a href="#">RoyalBrothersX</a></li>
+        <li><a href="#">Partner with us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Inter-city travel</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Reach Us</a></li>
+      </ul>
+    </div>
+
+    <div class="darkbgc" id="darkbgc"></div>
+
+    <div class="location-space" id="location-popup">
+      <div class="heading">
+        <img
+          src="./assets/royal_brothers_logo-229959d7727f356b2e4fc3bd9c0c527c60127d009c93989a93e2daa0b1c2d556.svg"
+          alt="Royal Brothers Logo"
+        />
+        <h3>Bike Rentals</h3>
+        <i class="fa-solid fa-x loc-x" id="popup-close"></i>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <i class="fa-solid fa-search"></i>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for a city..."
+        />
+        <button id="clear-search" aria-label="Clear search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- City Cards -->
+
+      <div class="city-cards" id="city-cards-container">
+        <div class="city-card" id="city-card-template" style="display: none">
+          <img src="" alt="" />
+          <p></p>
+        </div>
+      </div>
+    </div>
 
     <main>
       <section class="section1">
@@ -107,13 +162,21 @@
           </div>
           <button class="search-btn btn">Search</button>
         </div>
-        <div class="bottom">
+        <div class="bottom-img">
+          <h3>
+            <span>Save</span> upto <span>30%</span> with RoyalBrothers<span
+              >X</span
+            ><i class="fa-solid fa-arrow-right"></i>
+          </h3>
+        </div>
+
+        <!-- <div class="">
           <h3>
             Save upto 30% with RoyalBrothersX<i
               class="fa-solid fa-arrow-right"
             ></i>
           </h3>
-        </div>
+        </div> -->
       </section>
     </main>
 
