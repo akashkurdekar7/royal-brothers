@@ -1,0 +1,221 @@
+:root {
+  --primary-color: #fed250;
+  --secondary-color: #ffffff;
+  --third-color: #000000;
+  --bgc: #ffffff;
+  --footer: #444444;
+  --font-black-color: #000000;
+  --font-white-color: #ffffff;
+  --boxshadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* header */
+header {
+  height: auto;
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+}
+.two-part {
+  flex-direction: column;
+}
+.contact-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  border-bottom: 1px solid var(--third-color);
+}
+.number {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.number > span:last-child::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.25rem;
+  width: 2px;
+  background-color: var(--third-color);
+  margin-left: 0.5rem;
+}
+.header-con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--third-color);
+}
+.left {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.left-menu {
+  margin-left: 1rem;
+}
+.fa-bars {
+  font-size: 2rem;
+}
+.logo {
+  padding: 5px;
+}
+
+.logo img {
+  height: 4rem;
+  display: block;
+}
+nav {
+  height: 100%;
+}
+nav ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li a {
+  color: var(--font-black-color);
+  text-transform: capitalize;
+}
+nav ul li a:hover {
+  color: var(--primary-color);
+  text-transform: capitalize;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+.right-nav {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.right-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+.location {
+  border: 3px solid var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 0.3rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.location-dropdown {
+  padding: 5px;
+  border-radius: 4px;
+  outline: none;
+}
+.location-dropdown .option {
+  color: var(--third-color);
+}
+.location-dropdown,
+.option {
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.btn {
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+}
+.login-btn {
+  color: var(--third-color);
+  border: var(--primary-color);
+}
+.signup-btn {
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  border: var(--third-color);
+}
+
+/* section 1 */
+.section1 {
+  border: 1px solid red;
+  height: 80vh;
+  background: url("./assets/section1/Banglr_Banner_Desktop-92bec25b99397445dc79c6db2493016a1b5ad62fbb4825a1345fac85ccdcf0c1.webp")
+    no-repeat center center/cover;
+  position: relative;
+}
+
+.search-card {
+  background-color: var(--bgc);
+  box-shadow: var(--boxshadow);
+  padding: 1rem;
+  border-radius: 8px;
+  width: max-content;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  transform: translateY(-20%);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+.search-card h3 {
+  font-size: 2rem;
+}
+.pickup-div,
+.dropoff-div {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-transform: capitalize;
+}
+.date-time {
+  display: flex;
+  gap: 2rem;
+}
+
+.search-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--font-black-color);
+}
