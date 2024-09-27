@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cities = [
     {
       name: "Paris",
-      image: "https://images.pexels.com/photos/46114/pexels-photo-46114.jpeg",
+      image: "https://images.pexels.com/674010/pexels-photo-674010.jpeg",
     },
     {
       name: "New York",
